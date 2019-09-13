@@ -1,0 +1,15 @@
+Introduction
+
+Retrofit 2 is type-safe REST client build by square for Android and Java which intends to make it simpler to expend RESTful webservices. Retrofit 2 use OkHttp as the systems administration layer and is based over it. Retrofit naturally serializes the JSON reaction utilizing a POJO (PlainOldJavaObject) which must be characterized in cutting edge for the JSON Structure . To serialize JSON we require a converter to change over it into Gson first. Retrofit is much simpler than other libraries we don’t have to parse our json it directly returns objects but there is one disadvantage also it doesn’t provide support to loadimages from server but we can use picasso for the same. Now we should go for some practical implementation which will give better understanding to you.
+
+Implementation
+
+Step-1 : For using Retrofit in our android project firstly we have to add dependency in gradle file. For adding dependency open app/build.gradle file in your Android project and add the following lines inside it. Add these lines inside dependencies{}
+
+compile'com.google.code.gson:gson:2.6.2'
+compile'com.squareup.retrofit2:retrofit:2.0.2'
+compile'com.squareup.retrofit2:converter-gson:2.0.2'
+Step-2 : We should now add InternetPermission inside Manifestfile.Open the manifest.xml file and add the following line.
+
+users-permission android:name="android.permission.INTERNET"
+Step-3 : For retrieving data from the server using retrofit 2 we require a modelclass. We are going to make model class to retrieve data from the server.For making modelclass we should know how the json looks.
